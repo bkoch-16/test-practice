@@ -1,6 +1,21 @@
 const caesarCipher = require("./caesar");
-const caesar = require("./caesar");
 
 test("Shift 'hello' 3 spaces", () => {
-  expect(caesarCipher("hello", 5)).toBe("khoor");
+  expect(caesarCipher("hello", 3)).toBe("khoor");
+});
+
+test("Shift 'world' 3 spaces", () => {
+  expect(caesarCipher("world", 3)).toBe("zruog");
+});
+
+test("Shift 'xyz' 3 spaces", () => {
+  expect(caesarCipher("xyz", 3)).toBe("abc");
+});
+
+test("Shift 'HeLLo' 3 spaces", () => {
+  expect(caesarCipher("HeLLo", 3)).toBe("KhOOr");
+});
+
+test("Shift 'Hello, World!' 3 spaces", () => {
+  expect(caesarCipher("Hello, World!", 3)).toBe("Khoor, Zruog!");
 });
