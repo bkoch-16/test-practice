@@ -19,3 +19,11 @@ test("Shift 'HeLLo' 3 spaces", () => {
 test("Shift 'Hello, World!' 3 spaces", () => {
   expect(caesarCipher("Hello, World!", 3)).toBe("Khoor, Zruog!");
 });
+
+test("Shift 'xyz' 1 space", () => {
+  expect(caesarCipher("xyz", 1)).toBe("yza");
+});
+
+test("Shift 'xyz' 2 spaces", () => {
+  expect(caesarCipher("xyz", 2)).toBe("zab");
+});
